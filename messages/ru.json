@@ -1,0 +1,12 @@
+{
+  "HomePage": {
+    "title": "Привет мир!",
+    "about": "Добро пожаловать!"
+  },
+  "HeaderNavMenu": {
+    "store_title": "Магазин",
+    "community_title": "Сообщество",
+    "chat_title": "Чат",
+    "support_title": "Поддержка"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "HomePage": {
+    "title": "Hello world!",
+    "about": "Welcome!"
+  },
+  "HeaderNavMenu": {
+    "store_title": "Store",
+    "community_title": "Community",
+    "chat_title": "Chat",
+    "support_title": "Support"
+  }
+}
