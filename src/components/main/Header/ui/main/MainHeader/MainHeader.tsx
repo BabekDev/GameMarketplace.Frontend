@@ -5,10 +5,12 @@ import Link from "next/link";
 import Logo from "@/components/global/Logo/Logo";
 import LocalSelect from "@/components/global/LocalSelect/LocalSelect";
 import { useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 
 export default function MainHeader() {
   const t = useTranslations("HeaderNavMenu");
-  const a = useTranslations("HeaderAuth")
+  const a = useTranslations("HeaderAuth");
+  const locale = useLocale();
 
   return (
     <div className={styles.header_block}>
@@ -33,13 +35,13 @@ export default function MainHeader() {
       </div>
       <div className={styles.right_block}>
         <div className={styles.login_block}>
-          <Link className={styles.login_btn} href="/login">
-          {a("login")}
+          <Link className={styles.login_btn} href={`/${locale}/auth?form=login`}>
+            {a("login")}
           </Link>
         </div>
         <div className={styles.register_block}>
-          <Link className={styles.register_btn} href="/register">
-          {a("register")}
+          <Link className={styles.register_btn} href={`/${locale}/auth?form=register`}>
+            {a("register")}
           </Link>
         </div>
         <div className={styles.local_block}>

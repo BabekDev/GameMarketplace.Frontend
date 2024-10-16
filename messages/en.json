@@ -18,7 +18,14 @@
     "login_name": "Login with account name",
     "login_password": "Password",
     "login_remember_btn": "Remember me",
-    "login_enter_btn": "Login"
+    "login_enter_btn": "Login",
+    "reg_title": "Register",
+    "reg_name": "Create an account name",
+    "reg_password": "Create a password",
+    "second_reg_password": "Repeat password",
+    "reg_enter_btn": "Register",
+    "have_account": "Have account?",
+    "no_account": "Don't have an account? Register!"
   }
 }
 

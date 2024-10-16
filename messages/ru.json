@@ -18,6 +18,13 @@
     "login_name": "Войдите используя имя аккаунта",
     "login_password": "Пароль",
     "login_remember_btn": "Запомнить меня",
-    "login_enter_btn": "Войти"
+    "login_enter_btn": "Войти",
+    "reg_title": "Регистрация",
+    "reg_name": "Придуймайте имя аккаунта",
+    "reg_password": "Придуймате пароль",
+    "second_reg_password": "Повторите пароль",
+    "reg_enter_btn": "Зарегистрироваться",
+    "have_account": "Есть аккаунт?",
+    "no_account": "Нет аккаунта? Зарегистрируйтесь!"
   }
 }
