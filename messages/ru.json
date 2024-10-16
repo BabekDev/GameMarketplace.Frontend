@@ -8,5 +8,16 @@
     "community_title": "Сообщество",
     "chat_title": "Чат",
     "support_title": "Поддержка"
+  },
+  "HeaderAuth": {
+    "login": "Войти",
+    "register": "Регистрация"
+  },
+  "LoginPage": {
+    "login_title": "Вход",
+    "login_name": "Войдите используя имя аккаунта",
+    "login_password": "Пароль",
+    "login_remember_btn": "Запомнить меня",
+    "login_enter_btn": "Войти"
   }
 }

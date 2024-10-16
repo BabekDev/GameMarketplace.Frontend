@@ -8,6 +8,7 @@ import { useTranslations } from "next-intl";
 
 export default function MainHeader() {
   const t = useTranslations("HeaderNavMenu");
+  const a = useTranslations("HeaderAuth")
 
   return (
     <div className={styles.header_block}>
@@ -33,12 +34,12 @@ export default function MainHeader() {
       <div className={styles.right_block}>
         <div className={styles.login_block}>
           <Link className={styles.login_btn} href="/login">
-            Login
+          {a("login")}
           </Link>
         </div>
         <div className={styles.register_block}>
           <Link className={styles.register_btn} href="/register">
-            Register
+          {a("register")}
           </Link>
         </div>
         <div className={styles.local_block}>

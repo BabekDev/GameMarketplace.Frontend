@@ -8,5 +8,18 @@
     "community_title": "Community",
     "chat_title": "Chat",
     "support_title": "Support"
+  },
+  "HeaderAuth": {
+    "login": "Login",
+    "register": "Register"
+  },
+  "LoginPage": {
+    "login_title": "Login",
+    "login_name": "Login with account name",
+    "login_password": "Password",
+    "login_remember_btn": "Remember me",
+    "login_enter_btn": "Login"
   }
 }
+
+
