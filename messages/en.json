@@ -26,6 +26,10 @@
     "reg_enter_btn": "Register",
     "have_account": "Have account?",
     "no_account": "Don't have an account? Register!"
+  },
+
+  "ChatPage": {
+    "chat_title": "Chat's"
   }
 }
 
