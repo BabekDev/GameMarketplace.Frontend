@@ -6,11 +6,24 @@ import Logo from "@/components/global/Logo/Logo";
 import LocalSelect from "@/components/global/LocalSelect/LocalSelect";
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
+import { useState } from "react";
 
 export default function MainHeader() {
   const t = useTranslations("HeaderNavMenu");
   const a = useTranslations("HeaderAuth");
   const locale = useLocale();
+
+  const [isStoreMenuOpen, setIsStoreMenuOpen] = useState(false);
+  const [isCommunityMenuOpen, setIsCommunityMenuOpen] = useState(false);
+  const [isChatsMenuOpen, setIsChatsMenuOpen] = useState(false);
+  const [isSupportMenuOpen, setIsSupportMenuOpen] = useState(false);
+
+  const handleMenuClose = () => {
+    setIsStoreMenuOpen(false);
+    setIsCommunityMenuOpen(false);
+    setIsChatsMenuOpen(false);
+    setIsSupportMenuOpen(false);
+  };
 
   return (
     <div className={styles.header_block}>
@@ -19,28 +32,81 @@ export default function MainHeader() {
       </div>
       <div className={styles.center_block}>
         <nav className={styles.navigation_menu}>
-          <Link className={styles.menu_item} href={"/product"}>
-            {t("store_title")}
-          </Link>
-          <Link className={styles.menu_item} href={"/community"}>
-            {t("community_title")}
-          </Link>
-          <Link className={styles.menu_item} href={"/chat"}>
-            {t("chat_title")}
-          </Link>
-          <Link className={styles.menu_item} href={"/support"}>
-            {t("support_title")}
-          </Link>
+          <div
+            className={styles.menu_item}
+            onMouseEnter={() => setIsStoreMenuOpen(true)}
+            onMouseLeave={() => setIsStoreMenuOpen(false)}
+          >
+            <Link href={"/store"} onClick={handleMenuClose}>{t("store_title")}</Link>
+            {isStoreMenuOpen && (
+              <div className={styles.dropdown_menu}>
+                <Link href={"/"} onClick={handleMenuClose}>{t("home")}</Link>
+                <Link href={"/store/sales"} onClick={handleMenuClose}>{t("top_products")}</Link>
+                <Link href={"/store/sales"} onClick={handleMenuClose}>{t("sales")}</Link>
+              </div>
+            )}
+          </div>
+
+          <div
+            className={styles.menu_item}
+            onMouseEnter={() => setIsCommunityMenuOpen(true)}
+            onMouseLeave={() => setIsCommunityMenuOpen(false)}
+          >
+            <Link href={"/community"} onClick={handleMenuClose}>{t("community_title")}</Link>
+            {isCommunityMenuOpen && (
+              <div className={styles.dropdown_menu}>
+                <Link href={"/community/discussions"} onClick={handleMenuClose}>{t("discussions")}</Link>
+                <Link href={"/community/forum"} onClick={handleMenuClose}>{t("forum")}</Link>
+                <Link href={"/community/groups"} onClick={handleMenuClose}>{t("groups")}</Link>
+              </div>
+            )}
+          </div>
+
+          <div
+            className={styles.menu_item}
+            onMouseEnter={() => setIsChatsMenuOpen(true)}
+            onMouseLeave={() => setIsChatsMenuOpen(false)}
+          >
+            <Link href={"/chat"} onClick={handleMenuClose}>{t("chat_title")}</Link>
+            {isChatsMenuOpen && (
+              <div className={styles.dropdown_menu}>
+                <Link href={"/chat"} onClick={handleMenuClose}>{t("private_chats")}</Link>
+                <Link href={"/chat/group"} onClick={handleMenuClose}>{t("group_chats")}</Link>
+              </div>
+            )}
+          </div>
+
+          <div
+            className={styles.menu_item}
+            onMouseEnter={() => setIsSupportMenuOpen(true)}
+            onMouseLeave={() => setIsSupportMenuOpen(false)}
+          >
+            <Link href={"/support"} onClick={handleMenuClose}>{t("support_title")}</Link>
+            {isSupportMenuOpen && (
+              <div className={styles.dropdown_menu}>
+                <Link href={"/support/contact"} onClick={handleMenuClose}>{t("contact_support")}</Link>
+                <Link href={"/support/faq"} onClick={handleMenuClose}>{t("faq")}</Link>
+              </div>
+            )}
+          </div>
         </nav>
       </div>
       <div className={styles.right_block}>
         <div className={styles.login_block}>
-          <Link className={styles.login_btn} href={`/${locale}/auth?form=login`}>
+          <Link
+            className={styles.login_btn}
+            href={`/${locale}/auth?form=login`}
+            onClick={handleMenuClose}
+          >
             {a("login")}
           </Link>
         </div>
         <div className={styles.register_block}>
-          <Link className={styles.register_btn} href={`/${locale}/auth?form=register`}>
+          <Link
+            className={styles.register_btn}
+            href={`/${locale}/auth?form=register`}
+            onClick={handleMenuClose}
+          >
             {a("register")}
           </Link>
         </div>

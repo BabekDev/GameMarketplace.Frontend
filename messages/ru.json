@@ -7,7 +7,17 @@
     "store_title": "Магазин",
     "community_title": "Сообщество",
     "chat_title": "Чат",
-    "support_title": "Поддержка"
+    "support_title": "Поддержка",
+    "discussions": "Обсуждения",
+    "forum": "Форум",
+    "groups": "Группы",
+    "private_chats": "Чаты",
+    "group_chats": "Группы",
+    "top_products": "Топ",
+    "home": "Главная",
+    "sales": "Скидки",
+    "contact_support": "Связаться с поддержкой",
+    "faq": "FAQ"
   },
   "HeaderAuth": {
     "login": "Войти",
@@ -29,5 +39,8 @@
   },
   "ChatPage": {
     "chat_title": "Чаты"
+  },
+  "FooterPage": {
+    "footer_info": "© 2024 Nevets Corporation. Все права сохранены. Все торговые марки являются собственностью соответствующих владельцев в США и других странах. НДС включён во все цены, где он применим."
   }
 }

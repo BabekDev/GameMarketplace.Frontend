@@ -7,7 +7,17 @@
     "store_title": "Store",
     "community_title": "Community",
     "chat_title": "Chat",
-    "support_title": "Support"
+    "support_title": "Support",
+    "discussions": "Discussion's",
+    "forum": "Forum",
+    "groups": "Group's",
+    "private_chats": "Chat",
+    "group_chats": "Group's",
+    "top_products": "Top",
+    "home": "Home",
+    "sales": "Sales",
+    "contact_support": "Contact with support",
+    "faq": "FAQ"
   },
   "HeaderAuth": {
     "login": "Login",
@@ -30,6 +40,9 @@
 
   "ChatPage": {
     "chat_title": "Chat's"
+  },
+  "FooterPage": {
+    "footer_info": "© 2024 Nevets Corporation. All rights reserved. All trademarks are the property of their respective owners in the United States and other countries. VAT is included in all prices where applicable."
   }
 }
 

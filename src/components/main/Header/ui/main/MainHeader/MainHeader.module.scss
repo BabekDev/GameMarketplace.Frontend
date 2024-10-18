@@ -4,35 +4,77 @@
   background: #171d25;
   display: flex;
   align-items: center;
+  position: relative;
 
   .left_block {
     width: 100%;
     display: flex;
     align-items: center;
   }
+
   .center_block {
     width: 100%;
 
     .navigation_menu {
       display: flex;
       align-items: center;
+      position: relative;
 
       .menu_item {
-        text-decoration: none;
+        position: relative;
         padding: 0px 16px;
-        color: #dcdedf;
-        font-weight: 500;
         text-transform: uppercase;
+        font-weight: 500;
         font-size: 16px;
-        font-family: "Motiva Sans", "Twemoji", "Noto Sans", Helvetica,
-          sans-serif;
-      }
-      .menu_item:hover {
-        text-decoration: underline;
-        color: #00c3ff;
+        font-family: "Motiva Sans", "Twemoji", "Noto Sans", Helvetica, sans-serif;
+
+        a {
+          color: #dcdedf;
+          text-decoration: none;
+        }
+
+        &:hover a {
+          color: #00c3ff;
+          text-decoration: underline;
+        }
+
+        .dropdown_menu {
+          min-width: 100px;
+          display: none;
+          flex-direction: column;
+          justify-content: center;
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+          background-color: rgb(35, 52, 73);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          padding: 10px;
+          border-radius: 5px;
+          z-index: 100;
+        }
+
+        &:hover .dropdown_menu {
+          display: flex;
+        }
+
+        .dropdown_menu a {
+          color: #dcdedf;
+          text-decoration: none;
+          padding: 8px 16px;
+          font-size: 14px;
+          white-space: nowrap;
+        }
+
+        .dropdown_menu a:hover {
+          background-color: #282c34;
+          color: #00c3ff;
+          border-radius: 3px;
+        }
       }
     }
   }
+
   .right_block {
     width: 100%;
     display: flex;
@@ -53,6 +95,7 @@
         color: white;
         border-radius: 5px;
       }
+
       .login_btn:hover,
       .register_btn:hover {
         background-color: #1997ff8a;
