@@ -1,14 +1,17 @@
-"use client";
-
-import { useTranslations } from "next-intl";
+import MainBanner from "@/components/main/MainBanner/MainBanner";
+import MainNavigation from "@/components/main/MainNavigation/MainNavigation";
+import MainProducts from "@/components/main/MainProducts/MainProducts";
+import styles from "@/styles/home-page.module.scss";
 
 export default function HomePage() {
-  const t = useTranslations("HomePage");
-
   return (
-    <div>
-      <h4>{t("title")}</h4>
-      <h5>{t("about")}</h5>
+    <div className={styles.body_container}>
+      <MainNavigation />
+      <MainBanner />
+      <div className={styles.products_body}>
+        <MainProducts category={"Game"} />
+        <MainProducts category={"Network"} />
+      </div>
     </div>
   );
 }

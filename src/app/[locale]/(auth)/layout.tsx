@@ -2,10 +2,9 @@ import type { Metadata } from "next";
 import "@/styles/globals.scss";
 import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
-import styles from "./layout.module.scss"
+import styles from "./layout.module.scss";
 import MainHeader from "@/components/main/Header/ui/main/MainHeader/MainHeader";
 import Footer from "@/components/main/Footer/Footer";
-
 
 export const metadata: Metadata = {
   title: "Auth Page",
@@ -23,12 +22,12 @@ export default async function AuthLayout({
 
   return (
     <html lang={locale}>
-      <body className={styles.main_body}>
+      <body>
         <NextIntlClientProvider messages={messages}>
-        <MainHeader/>
-          {children}
+          <MainHeader />
+          <div className={styles.main_body}>{children}</div>
         </NextIntlClientProvider>
-        <Footer/>
+        {/* <Footer /> */}
       </body>
     </html>
   );

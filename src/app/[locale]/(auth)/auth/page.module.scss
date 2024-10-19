@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 
 .auth_sheet {
   width: 100%;
@@ -7,8 +7,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #1b2838 url("/background_blue.png") no-repeat center center;
-  background-size: cover;
+  // background: #181a21;
+  // background: #1b2838 url("/background_blue.png") no-repeat center center;
+  // background-size: cover;
   position: relative;
 
   &::before {
@@ -64,7 +65,7 @@
   .auth_login_title,
   .auth_reg_title {
     font-size: 30px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: bold;
     margin-bottom: 20px;
     color: #fff;
@@ -85,19 +86,19 @@
     .auth_name {
       color: #1999ff;
       font-size: 14px;
-      font-family: 'Montserrat', sans-serif;
+      font-family: "Montserrat", sans-serif;
     }
 
     .auth_password {
-      font-family: 'Montserrat', sans-serif;
+      font-family: "Montserrat", sans-serif;
       color: #afafaf;
       font-size: 14px;
     }
     .switch_button {
-      font-family: 'Montserrat', sans-serif;
+      font-family: "Montserrat", sans-serif;
     }
     .auth_btn {
-      font-family: 'Montserrat', sans-serif;
+      font-family: "Montserrat", sans-serif;
       background-color: #512da8;
       color: #fff;
       font-size: 12px;
@@ -150,14 +151,12 @@
   .show_right {
     transform: translateX(100%); // ----->
     border-radius: 50px 0 0 50px;
-    background-color: rgba(25, 151, 255, 0.459);   
+    background-color: rgba(25, 151, 255, 0.459);
   }
 
   .show_left {
     transform: translateX(0); // <-----
     border-radius: 0 50px 50px 0;
-    background-color: rgba(25, 151, 255, 0.459);  
+    background-color: rgba(25, 151, 255, 0.459);
   }
-
-  
 }

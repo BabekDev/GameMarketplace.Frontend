@@ -22,11 +22,13 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
-      <body className={styles.main_body}>
+      <body>
         <NextIntlClientProvider messages={messages}>
           <Header />
 
-          <main className={styles.main_content_block}>{children}</main>
+          <nav className={styles.main_body}>
+            <main className={styles.main_content_block}>{children}</main>
+          </nav>
 
           <Footer />
         </NextIntlClientProvider>
