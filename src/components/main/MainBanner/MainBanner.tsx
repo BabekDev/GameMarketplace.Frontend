@@ -8,8 +8,6 @@ export default function MainBanner() {
     <div className={styles.banner_body}>
       <div className={styles.content_block}>
         <MainBannerCard />
-        <MainBannerCard />
-        <MainBannerCard />
       </div>
     </div>
   );

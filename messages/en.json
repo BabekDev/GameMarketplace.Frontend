@@ -43,6 +43,18 @@
   },
   "FooterPage": {
     "footer_info": "© 2024 Nevets Corporation. All rights reserved. All trademarks are the property of their respective owners in the United States and other countries. VAT is included in all prices where applicable."
+  },
+  "NavMenu": {
+    "categories": "All categories",
+    "selling": "Start selling",
+    "partnership": "Partnership",
+    "guides": "Tips and guides",
+    "garanties": "Our garanties",
+    "services": "Our services",
+    "search_label": "Search..."
+  },
+  "MainTagNew": {
+    "new": "New"
   }
 }
 
