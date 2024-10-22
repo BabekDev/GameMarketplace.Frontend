@@ -2,7 +2,7 @@
 
 import styles from "./MainProducts.module.scss";
 import type { MainProductsProps } from "./MainProducts.props";
-import GameProduct from "./ui/GameProduct/GameProduct";
+import GameProduct from "./ui/GameServices/GameProduct";
 import NetworkProduct from "./ui/NetworkProduct/NetworkProduct";
 
 export default function MainProducts({ category }: MainProductsProps) {

@@ -54,5 +54,12 @@
   },
   "MainTagNew": {
     "new": "Новое"
+  },
+  "GameServicesProductPage": {
+    "recommendation": "Рекомендации",
+    "no_recommendations": "Нет доступных рекомендаций"
+  },
+  "GameProductPage": {
+    "game_services": "Игровые сервисы"
   }
 }

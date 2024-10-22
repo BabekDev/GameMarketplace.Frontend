@@ -55,6 +55,13 @@
   },
   "MainTagNew": {
     "new": "New"
+  },
+  "GameServicesProductPage": {
+    "recommendation": "Recommendation",
+    "no_recommendations": "No recommendations available"
+  },
+  "GameProductPage": {
+    "game_services": "Game Services"
   }
 }
 

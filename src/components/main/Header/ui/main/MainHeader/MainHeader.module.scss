@@ -1,6 +1,6 @@
 .header_block {
   width: 100%;
-  height: auto;
+  height: 85px;
   background: #171d25;
 
   .nav_block {
@@ -13,8 +13,14 @@
 
     .left_block {
       width: 100%;
+      height: 100%;
       display: flex;
       align-items: center;
+      justify-content: flex-start;
+      .logo_block {
+        margin: 0 0;
+        width: 40%;
+      }
     }
 
     .center_block {
@@ -33,16 +39,21 @@
           font-size: 16px;
           font-family: "Motiva Sans", "Twemoji", "Noto Sans", Helvetica,
             sans-serif;
+
           :hover {
-            text-shadow: 0 0 10px rgba(62, 103, 150, 0.919), 0 0 20px rgba(62, 103, 150, 0.919), 0 0 40px, 0 0 80px rgba(62, 103, 150, 0.919);
+            border: transparent;
+            // text-shadow: 0 0 10px rgba(62, 103, 150, 0.919),
+            //   0 0 20px rgba(62, 103, 150, 0.919), 0 0 40px,
+            //   0 0 80px rgba(62, 103, 150, 0.919);
           }
+
           .link_item {
             color: #dcdedf;
             text-decoration: none;
           }
 
           &:hover a {
-            color: #ffffff;
+            color: #0077ff;
             text-decoration: underline;
             text-shadow: 0;
           }
@@ -90,30 +101,53 @@
 
     .right_block {
       width: 100%;
+      height: 100%;
       display: flex;
-      justify-content: right;
+      flex-direction: column;
+      align-items: flex-end;
 
-      .login_block,
-      .register_block,
-      .local_block {
-        padding: 0px 10px;
+      .top_block {
+        margin-top: 5px;
+        height: 100%;
         display: flex;
-        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        margin-bottom: 10px;
+        .register_block {
+          padding-left: 5px;
+        }
+        .border_auth {
+          color: rgba(77, 124, 252, 0.514);
+          cursor: default;
+        }
+        .login_block {
+          padding-right: 5px;
+        }
 
         .login_btn,
         .register_btn {
           text-decoration: none;
-          padding: 4px 14px;
-          background-color: #1999ff;
-          color: white;
-          border-radius: 5px;
+          padding: 4px 5px;
+          background-color: transparent;
+          color: rgba(77, 124, 252, 0.514);
+          font-family: "Motiva Sans", "Twemoji", "Noto Sans", Helvetica,
+            sans-serif;
+          font-size: 16px;
         }
 
         .login_btn:hover,
         .register_btn:hover {
-          background-color: #1997ff8a;
+          background-color: transparent;
           color: #b1b1b1;
         }
+      }
+
+      .local_block {
+        margin-bottom: 10px;
+        background-color: transparent;
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
       }
     }
   }

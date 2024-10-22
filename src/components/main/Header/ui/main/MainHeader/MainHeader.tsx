@@ -29,7 +29,9 @@ export default function MainHeader() {
     <div className={styles.header_block}>
       <nav className={styles.nav_block}>
         <div className={styles.left_block}>
+          <div className={styles.logo_block}>
           <Logo />
+          </div>
         </div>
         <div className={styles.center_block}>
           <nav className={styles.navigation_menu}>
@@ -140,26 +142,31 @@ export default function MainHeader() {
           </nav>
         </div>
         <div className={styles.right_block}>
-          <div className={styles.login_block}>
-            <Link
-              className={styles.login_btn}
-              href={`/${locale}/auth?form=login`}
-              onClick={handleMenuClose}
-            >
-              {a("login")}
-            </Link>
-          </div>
-          <div className={styles.register_block}>
-            <Link
-              className={styles.register_btn}
-              href={`/${locale}/auth?form=register`}
-              onClick={handleMenuClose}
-            >
-              {a("register")}
-            </Link>
-          </div>
-          <div className={styles.local_block}>
+        <div className={styles.local_block}>
             <LocalSelect />
+          </div>
+          <div className={styles.top_block}>
+            <div className={styles.login_block}>
+              <Link
+                className={styles.login_btn}
+                href={`/${locale}/auth?form=login`}
+                onClick={handleMenuClose}
+              >
+                {a("login")}
+              </Link>
+            </div>
+            <div className={styles.border_auth}>
+              |
+            </div>
+            <div className={styles.register_block}>
+              <Link
+                className={styles.register_btn}
+                href={`/${locale}/auth?form=register`}
+                onClick={handleMenuClose}
+              >
+              {a("register")}
+              </Link>
+            </div>
           </div>
         </div>
       </nav>
