@@ -59,7 +59,14 @@
     "recommendation": "Рекомендации",
     "no_recommendations": "Нет доступных рекомендаций"
   },
+  "NetworkServicesProductPage": {
+    "recommendation": "Рекомендации",
+    "no_recommendations": "Нет доступных рекомендаций"
+  },
   "GameProductPage": {
     "game_services": "Игровые сервисы"
+  },
+  "NetworkProductPage": {
+    "network_services": "Сетевые продукты"
   }
 }

@@ -60,8 +60,15 @@
     "recommendation": "Recommendation",
     "no_recommendations": "No recommendations available"
   },
+  "NetworkServicesProductPage": {
+    "recommendation": "Recommendation",
+    "no_recommendations": "No recommendations available"
+  },
   "GameProductPage": {
     "game_services": "Game Services"
+  },
+  "NetworkProductPage": {
+    "network_services": "Network Services"
   }
 }
 

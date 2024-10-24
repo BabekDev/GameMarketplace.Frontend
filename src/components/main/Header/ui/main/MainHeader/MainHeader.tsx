@@ -1,22 +1,35 @@
 "use client";
 
+import { useEffect, useState } from "react";
+import { usePathname, useSearchParams } from "next/navigation";
 import styles from "./MainHeader.module.scss";
 import Link from "next/link";
 import Logo from "@/components/global/Logo/Logo";
 import LocalSelect from "@/components/global/LocalSelect/LocalSelect";
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
-import { useState } from "react";
 
 export default function MainHeader() {
   const t = useTranslations("HeaderNavMenu");
   const a = useTranslations("HeaderAuth");
   const locale = useLocale();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
 
   const [isStoreMenuOpen, setIsStoreMenuOpen] = useState(false);
   const [isCommunityMenuOpen, setIsCommunityMenuOpen] = useState(false);
   const [isChatsMenuOpen, setIsChatsMenuOpen] = useState(false);
   const [isSupportMenuOpen, setIsSupportMenuOpen] = useState(false);
+
+  const [isAuthPage, setIsAuthPage] = useState(false);
+
+  useEffect(() => {
+    const formParam = searchParams.get("form");
+    const isAuth = pathname.includes("/auth") && 
+                   (formParam === "login" || formParam === "register");
+
+    setIsAuthPage(isAuth);
+  }, [pathname, searchParams]);
 
   const handleMenuClose = () => {
     setIsStoreMenuOpen(false);
@@ -30,7 +43,7 @@ export default function MainHeader() {
       <nav className={styles.nav_block}>
         <div className={styles.left_block}>
           <div className={styles.logo_block}>
-          <Logo />
+            <Logo />
           </div>
         </div>
         <div className={styles.center_block}>
@@ -61,7 +74,6 @@ export default function MainHeader() {
                 </div>
               )}
             </div>
-
             <div
               className={styles.menu_item}
               onMouseEnter={() => setIsCommunityMenuOpen(true)}
@@ -91,7 +103,6 @@ export default function MainHeader() {
                 </div>
               )}
             </div>
-
             <div
               className={styles.menu_item}
               onMouseEnter={() => setIsChatsMenuOpen(true)}
@@ -115,7 +126,6 @@ export default function MainHeader() {
                 </div>
               )}
             </div>
-
             <div
               className={styles.menu_item}
               onMouseEnter={() => setIsSupportMenuOpen(true)}
@@ -141,33 +151,34 @@ export default function MainHeader() {
             </div>
           </nav>
         </div>
+
         <div className={styles.right_block}>
-        <div className={styles.local_block}>
+          <div className={styles.local_block}>
             <LocalSelect />
           </div>
-          <div className={styles.top_block}>
-            <div className={styles.login_block}>
-              <Link
-                className={styles.login_btn}
-                href={`/${locale}/auth?form=login`}
-                onClick={handleMenuClose}
-              >
-                {a("login")}
-              </Link>
+          {!isAuthPage && (
+            <div className={styles.top_block}>
+              <div className={styles.login_block}>
+                <Link
+                  className={styles.login_btn}
+                  href={`/${locale}/auth?form=login`}
+                  onClick={handleMenuClose}
+                >
+                  {a("login")}
+                </Link>
+              </div>
+              <div className={styles.border_auth}>|</div>
+              <div className={styles.register_block}>
+                <Link
+                  className={styles.register_btn}
+                  href={`/${locale}/auth?form=register`}
+                  onClick={handleMenuClose}
+                >
+                  {a("register")}
+                </Link>
+              </div>
             </div>
-            <div className={styles.border_auth}>
-              |
-            </div>
-            <div className={styles.register_block}>
-              <Link
-                className={styles.register_btn}
-                href={`/${locale}/auth?form=register`}
-                onClick={handleMenuClose}
-              >
-              {a("register")}
-              </Link>
-            </div>
-          </div>
+          )}
         </div>
       </nav>
     </div>

@@ -52,14 +52,14 @@ export const gameServiceData: GameServicesProductCardProps = {
     },
     {
       id: 9,
-      serviceName: "-", // Пробел, чтобы обозначить, что это пустое место
-      serviceImageUrl: "/GameServicesImages/icon.png",
+      serviceName: "Wargaming",
+      serviceImageUrl: "/GameServicesImages/wargaming_logo.png",
       recommendations: [],
     },
     {
       id: 10,
-      serviceName: "-", // Пробел, чтобы обозначить, что это пустое место
-      serviceImageUrl: "/GameServicesImages/icon.png",
+      serviceName: "Gaijin Entertainment",
+      serviceImageUrl: "/GameServicesImages/gaijinentertainment_logo.png",
       recommendations: [],
     },
     {
