@@ -1,0 +1,20 @@
+.main_body {
+  width: 100%;
+  .banner_title_container {
+    width: 120px;
+    margin-top: 18px;
+    padding-top: 8px;
+    background-color: rgba(62, 103, 150, 0.919);
+    border-radius: 10px 10px 0px 0px;
+    display: flex;
+    justify-content: center;
+    .banner_title {
+      display: flex;
+      color: #bdc7d4;
+      font-size: 24px;
+      padding-bottom: 10px;
+      font-family: "Montserrat", sans-serif;
+      letter-spacing: 2px;
+    }
+  }
+}

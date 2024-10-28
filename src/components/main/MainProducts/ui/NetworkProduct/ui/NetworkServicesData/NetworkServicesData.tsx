@@ -1,6 +1,4 @@
 import { NetworkServicesProductCardProps } from "../../../NetworkProduct/NetworkProduct.props";
-import { useTranslations } from "next-intl";
-
 
 export const networkServiceData: NetworkServicesProductCardProps = {
   services: [
@@ -8,13 +6,21 @@ export const networkServiceData: NetworkServicesProductCardProps = {
       id: 1,
       serviceName: "Discord",
       serviceImageUrl: "/NetworkServicesImages/discord_logo.png",
-      recommendations: ["Групповые чаты", "Голосовые каналы", "Игровые сообщества"],
+      recommendations: [
+        "Групповые чаты",
+        "Голосовые каналы",
+        "Игровые сообщества",
+      ],
     },
     {
       id: 2,
       serviceName: "Spotify",
       serviceImageUrl: "/NetworkServicesImages/spotify_logo.png",
-      recommendations: ["Подкасты", "Музыкальные новинки", "Социальное прослушивание"],
+      recommendations: [
+        "Подкасты",
+        "Музыкальные новинки",
+        "Социальное прослушивание",
+      ],
     },
     {
       id: 3,
@@ -32,7 +38,11 @@ export const networkServiceData: NetworkServicesProductCardProps = {
       id: 5,
       serviceName: "VPN",
       serviceImageUrl: "/NetworkServicesImages/vpn_logo.png",
-      recommendations: ["Обход блокировок", "Анонимность в интернете", "Безопасное подключение"],
+      recommendations: [
+        "Обход блокировок",
+        "Анонимность в интернете",
+        "Безопасное подключение",
+      ],
     },
     {
       id: 6,
@@ -56,7 +66,11 @@ export const networkServiceData: NetworkServicesProductCardProps = {
       id: 9,
       serviceName: "Microsoft Store",
       serviceImageUrl: "/NetworkServicesImages/microsoft_logo.png",
-      recommendations: ["Игры", "Программное обеспечение", "Расширения для Windows"],
+      recommendations: [
+        "Игры",
+        "Программное обеспечение",
+        "Расширения для Windows",
+      ],
     },
     {
       id: 10,
@@ -68,7 +82,11 @@ export const networkServiceData: NetworkServicesProductCardProps = {
       id: 11,
       serviceName: "Whats App",
       serviceImageUrl: "/NetworkServicesImages/whatsapp_logo.png",
-      recommendations: ["Групповые чаты", "Голосовые звонки", "Шифрование сообщений"],
+      recommendations: [
+        "Групповые чаты",
+        "Голосовые звонки",
+        "Шифрование сообщений",
+      ],
     },
     {
       id: 12,
