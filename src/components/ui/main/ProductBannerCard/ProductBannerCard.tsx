@@ -1,6 +1,9 @@
-import { SetStateAction, useEffect, useState } from 'react';
+"use client";
+
+import { SetStateAction, useEffect, useState } from "react";
 import styles from "./ProductBannerCard.module.scss";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 const images = [
   { src: "/ProductBannerImages/cs2.png", alt: "CS2 Image" },
@@ -9,6 +12,7 @@ const images = [
 ];
 
 export default function ProductBannerCard() {
+  const t = useTranslations("ProductBannerCard");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [fadeClass, setFadeClass] = useState(styles.fadeIn);
   const [isPaused, setIsPaused] = useState(false);
@@ -19,7 +23,7 @@ export default function ProductBannerCard() {
 
     const interval = setInterval(() => {
       setFadeClass(styles.fadeOut);
-      
+
       setTimeout(() => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
         setFadeClass(styles.fadeIn);
@@ -43,24 +47,26 @@ export default function ProductBannerCard() {
       {images.map((image, index) => (
         <div
           key={index}
-          className={`${styles.card} ${currentIndex === index ? styles.active : ''} ${currentIndex === index ? fadeClass : ''}`}
+          className={`${styles.card} ${
+            currentIndex === index ? styles.active : ""
+          } ${currentIndex === index ? fadeClass : ""}`}
         >
-          <Image
-            src={image.src}
-            height={600}
-            width={1440}
-            alt={image.alt}
-          />
+          <Image src={image.src} height={600} width={1440} alt={image.alt} />
         </div>
       ))}
+      <div className={styles.text_container}>
+        <div className={styles.text}>{t("special_offers")}</div>
+      </div>
       <div className={styles.indicators}>
         {images.map((_, index) => (
           <span
             key={index}
-            className={`${styles.indicator} ${currentIndex === index ? styles.activeIndicator : ''}`}
+            className={`${styles.indicator} ${
+              currentIndex === index ? styles.activeIndicator : ""
+            }`}
             onClick={() => handleIndicatorClick(index)}
-            onMouseEnter={() => setIsPaused(true)} 
-            onMouseLeave={() => setIsPaused(false)} 
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
           ></span>
         ))}
       </div>

@@ -38,13 +38,13 @@
 
 .card {
   position: relative;
-  width: 360px;
+  width: 400px;
   height: 220px;
   cursor: pointer;
   transition: transform 0.3s, border 0.3s, box-shadow 0.3s;
   border-radius: 18px;
   overflow: hidden;
-
+  margin-right: 20px;
   &:hover {
     transform: scale(1.05);
     animation: glowAnimation 1.5s infinite;

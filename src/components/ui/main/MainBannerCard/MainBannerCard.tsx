@@ -12,7 +12,7 @@ export default function MainBannerCard() {
         <Image
           src="/BannerImages/cs2.png"
           height={220}
-          width={360}
+          width={400}
           alt="CS2 Image"
         />
       </div>
@@ -23,7 +23,7 @@ export default function MainBannerCard() {
         <Image
           src="/BannerImages/RB6.png"
           height={220}
-          width={360}
+          width={400}
           alt="RB6 Image"
         />
       </div>
@@ -34,7 +34,7 @@ export default function MainBannerCard() {
         <Image
           src="/BannerImages/dota2.png"
           height={220}
-          width={360}
+          width={400}
           alt="Dota2 Image"
         />
       </div>

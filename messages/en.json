@@ -42,7 +42,7 @@
     "chat_title": "Chat's"
   },
   "FooterPage": {
-    "footer_info": "© 2024 Nevets Corporation. All rights reserved. All trademarks are the property of their respective owners in the United States and other countries. VAT is included in all prices where applicable."
+    "footer_info": "© 2024 Nevets Corporation. All rights reserved."
   },
   "NavMenu": {
     "categories": "All categories",
@@ -69,6 +69,12 @@
   },
   "NetworkProductPage": {
     "network_services": "Network Services"
+  },
+  "ProductBannerCard": {
+    "special_offers": "Special Offers"
+  },
+  "StoreProducts" : {
+    "free": "Free"
   }
 }
 
