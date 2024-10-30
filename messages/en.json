@@ -75,6 +75,21 @@
   },
   "StoreProducts" : {
     "free": "Free"
+  },
+  "StoreFilter": {
+    "search": "Search",
+    "category": "Category",
+    "all": "All",
+    "action": "Action",
+    "adventure": "Adventure",
+    "music": "Music",
+    "video": "Video",
+    "platform": "Platform",
+    "windows": "Windows",
+    "ios": "IOS",
+    "android": "Android",
+    "price": "Prise",
+    "resetFilters": "Reset Filters"
   }
 }
 

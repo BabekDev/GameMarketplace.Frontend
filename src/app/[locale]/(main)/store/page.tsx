@@ -3,7 +3,8 @@
 import MainNavigation from "@/components/main/MainNavigation/MainNavigation";
 import ProductBanner from "@/components/main/ProductBanner/ProductBanner";
 import styles from "./StorePage.module.scss";
-import StoreProduct from "@/components/main/StoreProducts/StoreProduct";
+import StoreProduct from "@/components/ui/main/StoreProducts/StoreProduct";
+import StoreFilter from "@/components/ui/main/StoreFilter/StoreFilter";
 
 export default function StorePage() {
   return (
@@ -14,9 +15,11 @@ export default function StorePage() {
       </div>
       <div className={styles.store_body}>
         <div className={styles.store_products}>
-          <StoreProduct/>
+          <StoreProduct />
         </div>
-        <div className={styles.store_filters}>Filter</div>
+        <div className={styles.store_filters}>
+          {/* <StoreFilter /> */}
+        </div>
       </div>
     </div>
   );

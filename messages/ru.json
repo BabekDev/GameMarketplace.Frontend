@@ -74,5 +74,20 @@
   },
   "StoreProducts" : {
     "free": "Бесплатно"
+  },
+  "StoreFilter": {
+    "search": "Поиск",
+    "category": "Категория",
+    "all": "Все",
+    "action": "Экшн",
+    "adventure": "Приключения",
+    "music": "Музыка",
+    "video": "Видео",
+    "platform": "Платформа",
+    "windows": "Windows",
+    "ios": "IOS",
+    "android": "Android",
+    "price": "Цена",
+    "resetFilters": "Сбросить фильтры"
   }
 }
